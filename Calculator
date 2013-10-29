@@ -1,0 +1,103 @@
+package Tutorial2;
+import java.util.Scanner;
+
+
+public class Calculator {
+
+	public double subtract(double a, double b){
+		double answer = a - b;
+		return answer;
+	}
+	
+	public double addition(double a, double b){
+		double answer = a + b;
+		return answer;
+	}
+	
+	public double multiply(double a, double b){
+		double answer = a * b;
+		return answer;
+	}
+	
+	public double divide(double a, double b){
+		double answer = a / b;
+		return answer;
+	}
+	
+	public double factorial(double a){
+		if(a == 1)
+			return 1;
+		else{
+			return a * factorial(a-1);
+		}
+	
+	
+	
+	}
+	
+	
+	public void askuser(){
+		System.out.println("Enter your no('s)");
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Calculator c = new Calculator();
+		
+		System.out.println("Simple Calculator");
+		System.out.println("1. Add");
+		System.out.println("2. Subtract");
+		System.out.println("3. Multiply");
+		System.out.println("4. Divide");
+		System.out.println("5. Factorial");
+		System.out.println("6. Exit");
+		
+		Scanner input = new Scanner(System.in);
+		double calculation = input.nextDouble();
+		
+		if(calculation == 1){
+			
+			c.askuser();
+			double input1 = input.nextDouble();
+			double input2 = input.nextDouble();
+			double answer = c.addition(input1, input2);
+			System.out.print("answer is " + answer);
+		}
+		else if(calculation == 2){
+			c.askuser();
+			double input1 = input.nextDouble();
+			double input2 = input.nextDouble();
+			double answer = c.subtract(input1, input2);
+			System.out.print("answer is " + answer);
+		}
+		else if(calculation == 3){
+			c.askuser();
+			double input1 = input.nextDouble();
+			double input2 = input.nextDouble();
+			double answer = c.multiply(input1, input2);
+			System.out.print("answer is " + answer);
+		}
+		else if(calculation == 4){
+			c.askuser();
+			double input1 = input.nextDouble();
+			double input2 = input.nextDouble();
+			double answer = c.divide(input1, input2);
+			System.out.print("answer is " + answer);
+		}
+		else if(calculation == 5){
+			c.askuser();
+			double input1 = input.nextDouble();
+			double answer = c.factorial(input1);
+			System.out.print("answer is " + answer);
+		}
+		else if(calculation == 6){
+			System.exit(0);
+		}
+		
+		
+		
+	}
+
+}
